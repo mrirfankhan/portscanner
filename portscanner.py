@@ -1,7 +1,7 @@
 import socket
 import threading
 
-host="pythonprogramming.net"
+host=input("Enter url,ip")
 
 def main(port):
     main=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
@@ -16,6 +16,6 @@ def main(port):
 
 
 if __name__=="__main__":
-    for i in range(1,100):
+    for i in range(1,65353):
         t=threading.Thread(target=main,kwargs={'port':i})
         t.start()
